@@ -1,20 +1,10 @@
 #!/usr/bin/python
-# << CODE BY HUNX04
-# << MAU RECODE ??? IZIN DULU LAH,  MINIMAL TAG AKUN GITHUB MIMIN YANG MENGARAH KE AKUN INI, LEBIH GAMPANG SI PAKE FORK
-# << KALAU DI ATAS TIDAK DI IKUTI MAKA AKAN MENDAPATKAN DOSA KARENA MIMIN GAK IKHLAS
-# “Wahai orang-orang yang beriman! Janganlah kamu saling memakan harta sesamamu dengan jalan yang batil,” (QS. An Nisaa': 29). Rasulullah SAW juga melarang umatnya untuk mengambil hak orang lain tanpa izin.
-
-# IMPORT MODULE
-
-import json
-import requests
-import time
 import os
 import phonenumbers
 from phonenumbers import carrier, geocoder, timezone
 from sys import stderr
 
-Bl = '\033[30m'  # VARIABLE BUAT WARNA CUYY
+Bl = '\033[30m'  
 Re = '\033[1;31m'
 Gr = '\033[1;32m'
 Ye = '\033[1;33m'
@@ -24,9 +14,9 @@ Cy = '\033[1;36m'
 Wh = '\033[1;37m'
 
 
-# utilities
 
-# decorator for attaching run_banner to a function
+
+
 def is_option(func):
     def wrapper(*args, **kwargs):
         run_banner()
@@ -36,7 +26,6 @@ def is_option(func):
     return wrapper
 
 
-# FUNCTIONS FOR MENU
 @is_option
 def IP_Track():
     ip = input(f"{Wh}\n Enter IP target : {Gr}")  # INPUT IP ADDRESS
@@ -266,7 +255,7 @@ def option():
     / /_/ / / / / /_/ (__  ) /_/_____/ / / /  / /_/ / /__/ ,<   
     \____/_/ /_/\____/____/\__/     /_/ /_/   \__,_/\___/_/|_| 
 
-              {Wh}[ + ]  C O D E   B Y  H U N X  [ + ]
+              {Wh}[ + ]  C O D E   B Y  fifthv5  [ + ]
     """)
 
     stderr.writelines(f"\n\n\n{option_text()}")
@@ -279,7 +268,7 @@ def run_banner():
          .-.
        .'   `.          {Wh}--------------------------------
        :g g   :         {Wh}| {Gr}GHOST - TRACKER - IP ADDRESS {Wh}|
-       : o    `.        {Wh}|       {Gr}@CODE BY HUNXBYTS      {Wh}|
+       : o    `.        {Wh}|       {Gr}@CODE BY fifthv5       {Wh}|
       :         ``.     {Wh}--------------------------------
      :             `.
     :  :         .   `.
