@@ -100,7 +100,6 @@ def IP_Track():
     ip_data = json.loads(req_api.text)
     time.sleep(2)
     print(f"{Wh}\n IP target       :{Gr}", ip)
-    print(f"{Wh} Type IP         :{Gr}", ip_data["type"])
     print(f"{Wh} Country         :{Gr}", ip_data["country"])
     print(f"{Wh} Country Code    :{Gr}", ip_data["country_code"])
     print(f"{Wh} City            :{Gr}", ip_data["city"])
