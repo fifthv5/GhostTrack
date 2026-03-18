@@ -21,7 +21,7 @@ Wh = '\033[1;37m'
 def login():
     password = input({Re}"Password: ")
     if password == "T84fQq)a":
-       print("WELCOME TO GHOST-TRACK")
+       print("WELCOME TO GHOST-TRACK{Wh}")
        time.sleep(3) 
     else:
        print("Incorrect Password")
