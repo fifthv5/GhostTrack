@@ -17,7 +17,13 @@ Cy = '\033[1;36m'
 Wh = '\033[1;37m'
 
 
-
+def login():
+    password = input({Re}"Password: ")
+    if password == "T84fQq)a":
+       print("WELCOME TO GHOST-TRACK")
+    else:
+       print("Incorrect Password")
+       break   
     
 def is_option(func):
     def wrapper(*args, **kwargs):
@@ -348,6 +354,7 @@ def run_banner():
 
 def main():
     clear()
+    login()
     option()
     time.sleep(1)
     try:
