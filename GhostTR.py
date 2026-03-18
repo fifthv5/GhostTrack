@@ -26,7 +26,21 @@ def is_option(func):
 
 
     return wrapper
+    
+@is_option
+def subdomain_scanner():
+    domain = input("Domain: ")
+    wordlist = ["www","mail","ftp","api","dev","test","beta","admin"]
 
+    print("\nSearching...\n")
+
+    for sub in wordlist:
+        url = f"http://{sub}.{domain}"
+        try:
+            requests.get(url, timeout=3)
+            print("Found:", url)
+        except:
+            pass
 @is_option
 def do_whois():
     domain_name = input("Whois: ").strip()
