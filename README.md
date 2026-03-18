@@ -11,7 +11,7 @@ New update :
 sudo apt-get install git
 sudo apt-get install python3
 ```
-
+### Password is T84fQq)a
 ### Installation on Termux
 ```
 pkg install git
