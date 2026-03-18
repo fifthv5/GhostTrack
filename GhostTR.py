@@ -6,6 +6,7 @@ import phonenumbers
 from phonenumbers import carrier, geocoder, timezone
 from sys import stderr
 import whois
+import sys
 
 Bl = '\033[30m'  
 Re = '\033[1;31m'
@@ -23,7 +24,7 @@ def login():
        print("WELCOME TO GHOST-TRACK")
     else:
        print("Incorrect Password")
-       break   
+       sys.exit()   
     
 def is_option(func):
     def wrapper(*args, **kwargs):
