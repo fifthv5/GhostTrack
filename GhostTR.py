@@ -40,6 +40,7 @@ def hash_cracker():
         print("Could not open wordlist")
 
     print("Hash not cracked")
+    
 def login():
     password = input(f"{Re}Password: ")
     if password == "T84fQq)a":
@@ -237,7 +238,7 @@ options = [
     },
     {
         'num': 2,
-        'text': 'Show Your IP',
+        'text': 'Show IP',
         'func': showIP
 
     },
@@ -264,7 +265,7 @@ options = [
     {
         'num': 7,
         'text': 'Hash Cracker',
-        'func': hash_cracker
+        'func': exit
     },
     {
         'num': 0,
