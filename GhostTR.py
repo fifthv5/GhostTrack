@@ -19,9 +19,9 @@ Wh = '\033[1;37m'
 
 
 def login():
-    password = input({Re}"Password: ")
+    password = input(f"{Re}Password: ")
     if password == "T84fQq)a":
-       print("WELCOME TO GHOST-TRACK{Wh}")
+       print(f"WELCOME TO GHOST-TRACK{Wh}")
        time.sleep(3) 
     else:
        print("Incorrect Password")
@@ -66,34 +66,12 @@ def do_whois():
     except Exception as e:
         print("Error:", e)
 
-@is_option
-def port_scan():
-    target = input("Target IP: ")
-
-    ports = range(1,1025)
-
-    print("\nScanning ports...\n")
-
-    for port in ports:
-
-        try:
-            s = socket.socket()
-            s.settimeout(0.5)
-
-            if s.connect_ex((target,port)) == 0:
-                print("Open Port:", port)
-
-            s.close()
-
-        except:
-            pass
-
 
 @is_option
 def IP_Track():
     ip = input(f"{Wh}\n Enter IP target : {Gr}")  
     print()
-    print(f' {Wh}============= {Gr}SHOW INFORMATION IP ADDRESS {Wh}=============')
+    print(f' {Wh}============= {Gr} IP ADDRESS INFORMATION{Wh}=============')
     req_api = requests.get(f"http://ipwho.is/{ip}") 
     ip_data = json.loads(req_api.text)
     time.sleep(2)
@@ -257,8 +235,8 @@ options = [
     },
     {
         'num': 6,
-        'text': 'Port Scan',
-        'func': port_scan
+        'text': 'Subdomain Scanner',
+        'func': subdomain_scanner
     },
     {
         'num': 0,
