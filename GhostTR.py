@@ -17,7 +17,29 @@ Mage = '\033[1;35m'
 Cy = '\033[1;36m'
 Wh = '\033[1;37m'
 
+def hash_cracker():
+    hash_value = input("Hash: ")
+    path = input("Wordlist: ")
 
+    try:
+        with open(path) as f:
+            for word in f:
+                word = word.strip()
+
+                if hashlib.md5(word.encode()).hexdigest() == hash_value:
+                    print("Cracked (MD5):", word)
+                    pause()
+                    return
+
+                if hashlib.sha1(word.encode()).hexdigest() == hash_value:
+                    print("Cracked (SHA1):", word)
+                    pause()
+                    return
+
+    except:
+        print("Could not open wordlist")
+
+    print("Hash not cracked")
 def login():
     password = input(f"{Re}Password: ")
     if password == "T84fQq)a":
@@ -238,6 +260,11 @@ options = [
         'num': 6,
         'text': 'Subdomain Scanner',
         'func': subdomain_scanner
+    },
+    {
+        'num': 7,
+        'text': 'Hash Cracker',
+        'func': hash_cracker
     },
     {
         'num': 0,
