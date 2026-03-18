@@ -53,20 +53,20 @@ def subdomain_scanner():
 def do_whois():
     domain_name = input("Whois: ").strip()
     try:
-       domain_info = whois.whois(domain)
+        # Corrected variable name from `domain` to `domain_name`
+        domain_info = whois.whois(domain_name)
         
         # Display the WHOIS information
-           print("Domain: ", domain_info.domain)
-           print("Registrar: ", domain_info.registrar)
-           print("Creation Date: ", domain_info.creation_date)
-           print("Expiration Date: ", domain_info.expiration_date)
-           print("Name Servers: ", domain_info.name_servers)
-           print("WHOIS Server: ", domain_info.whois_server)
-           print("Updated Date: ", domain_info.updated_date)
+        print("Domain: ", domain_info.domain)
+        print("Registrar: ", domain_info.registrar)
+        print("Creation Date: ", domain_info.creation_date)
+        print("Expiration Date: ", domain_info.expiration_date)
+        print("Name Servers: ", domain_info.name_servers)
+        print("WHOIS Server: ", domain_info.whois_server)
+        print("Updated Date: ", domain_info.updated_date)
 
     except Exception as e:
-        print("Error:", e)
-
+        print("ERROR: {e}")
 
 @is_option
 def IP_Track():
