@@ -17,8 +17,7 @@ Cy = '\033[1;36m'
 Wh = '\033[1;37m'
 
 
-def pause():
-    input("Press Enter to continue...")
+
     
 def is_option(func):
     def wrapper(*args, **kwargs):
@@ -45,7 +44,6 @@ def do_whois():
     except Exception as e:
         print("Error:", e)
 
-    pause()
 @is_option
 def port_scan():
     target = input("Target IP: ")
@@ -68,7 +66,6 @@ def port_scan():
         except:
             pass
 
-    pause()
 
 @is_option
 def IP_Track():
@@ -205,7 +202,7 @@ def showIP():
     Show_IP = respone.text
 
     print(f"\n {Wh}========== {Gr}SHOW INFORMATION YOUR IP {Wh}==========")
-    print(f"\n {Wh}[{Gr} + {Wh}] Your IP Adrress : {Gr}{Show_IP}")
+    print(f"\n {Wh}[{Gr} + {Wh}] Your IP Address : {Gr}{Show_IP}")
     print(f"\n {Wh}==============================================")
 
 
@@ -233,20 +230,20 @@ options = [
         'func': TrackLu
     },
     {
-        'num': 0,
-        'text': 'Exit',
-        'func': exit
-    }
-    {
         'num': 5,
         'text': 'Whois Lookup',
         'func': do_whois
-    }
+    },
     {
         'num': 6,
         'text': 'Port Scan',
         'func': port_scan
-    }
+    },
+    {
+        'num': 0,
+        'text': 'Exit',
+        'func': exit
+    },
 ]
 
 
@@ -309,7 +306,7 @@ def option():
     / /_/ / / / / /_/ (__  ) /_/_____/ / / /  / /_/ / /__/ ,<   
     \____/_/ /_/\____/____/\__/     /_/ /_/   \__,_/\___/_/|_| 
 
-              {Wh}[ + ]  C O D E   B Y  H U N X  [ + ]
+              {Wh}[ + ]  C O D E   B Y  FIFTHV5  [ + ]
     """)
 
     stderr.writelines(f"\n\n\n{option_text()}")
@@ -322,7 +319,7 @@ def run_banner():
          .-.
        .'   `.          {Wh}--------------------------------
        :g g   :         {Wh}| {Gr}GHOST - TRACKER - IP ADDRESS {Wh}|
-       : o    `.        {Wh}|       {Gr}@CODE BY fifthv5    {Wh}|
+       : o    `.        {Wh}|       {Gr}@CODE BY fifthv5    {Wh}   |  
       :         ``.     {Wh}--------------------------------
      :             `.
     :  :         .   `.
@@ -341,7 +338,7 @@ def main():
     option()
     time.sleep(1)
     try:
-        opt = int(input(f"{Wh}\n [ + ] {Gr}Select Option : {Wh}"))
+        opt = int(input(f"{Wh}\n[ + ] {Gr}Select Option : {Wh}"))
         execute_option(opt)
     except ValueError:
         print(f'\n{Wh}[ {Re}! {Wh}] {Re}Please input number')
@@ -355,4 +352,3 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print(f'\n{Wh}[ {Re}! {Wh}] {Re}Exit')
         time.sleep(2)
-        exit()
