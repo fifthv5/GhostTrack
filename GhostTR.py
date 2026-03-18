@@ -318,7 +318,7 @@ def run_banner():
          .-.
        .'   `.          {Wh}--------------------------------
        :g g   :         {Wh}| {Gr}GHOST - TRACKER - IP ADDRESS {Wh}|
-       : o    `.        {Wh}|       {Gr}@CODE BY fifthv5    {Wh}   |  
+       : o    `.        {Wh}|       {Gr}@CODE BY FIFTHV5    {Wh}   |  
       :         ``.     {Wh}--------------------------------
      :             `.
     :  :         .   `.
