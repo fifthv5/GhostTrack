@@ -22,6 +22,7 @@ def login():
     password = input({Re}"Password: ")
     if password == "T84fQq)a":
        print("WELCOME TO GHOST-TRACK")
+       time.sleep(3) 
     else:
        print("Incorrect Password")
        sys.exit()   
