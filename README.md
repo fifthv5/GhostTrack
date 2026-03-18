@@ -1,7 +1,7 @@
 # GhostTrack
 Useful tool to track location or mobile number, so this tool can be called OSINT or also information gathering
 
-<img src="https://github.com/HunxByts/GhostTrack/blob/main/asset/bn.png"/>
+<img src="https://github.com/fifthv5/GhostTrack/blob/main/Screenshot from 2026-03-18 15-40-20.png"/>
 
 New update :
 ```Version 2.2```
